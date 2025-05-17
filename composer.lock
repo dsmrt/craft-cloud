@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0bf13ad21b51e65cbc0d53dd656465a8",
+    "content-hash": "0589b3c08d0f4446abb664db3d589c52",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1138,6 +1138,182 @@
                 "source": "https://github.com/ezyang/htmlpurifier/tree/v4.18.0"
             },
             "time": "2024-11-01T03:51:45+00:00"
+        },
+        {
+            "name": "flipboxfactory/keychain",
+            "version": "5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flipboxfactory/keychain.git",
+                "reference": "f11b2f651591fffd32763c3cec4d878f3d150596"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flipboxfactory/keychain/zipball/f11b2f651591fffd32763c3cec4d878f3d150596",
+                "reference": "f11b2f651591fffd32763c3cec4d878f3d150596",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0",
+                "lib-openssl": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.0",
+                "squizlabs/php_codesniffer": "^2.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "KeyChain",
+                "class": "flipbox\\keychain\\KeyChain",
+                "handle": "keychain",
+                "version": "5.0.0",
+                "developer": "Flipbox Digital",
+                "downloadUrl": "https://github.com/flipboxfactory/keychain/archive/master.zip",
+                "changelogUrl": "https://raw.githubusercontent.com/flipboxfactory/keychain/master/CHANGELOG.md",
+                "developerUrl": "https://www.flipboxdigital.com",
+                "schemaVersion": "1.0.0"
+            },
+            "autoload": {
+                "psr-4": {
+                    "flipbox\\keychain\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Key pair management for Craft CMS",
+            "keywords": [
+                "cms",
+                "craftcms",
+                "key pair",
+                "openssl",
+                "yii2"
+            ],
+            "support": {
+                "docs": "https://github.com/flipboxfactory/keychain",
+                "email": "support@flipboxfactory.com",
+                "issues": "https://github.com/flipboxfactory/keychain/issues?state=open",
+                "rss": "https://github.com/flipboxfactory/keychain/commits/master.atom",
+                "source": "https://github.com/flipboxfactory/keychain"
+            },
+            "time": "2024-04-17T21:35:03+00:00"
+        },
+        {
+            "name": "flipboxfactory/saml-core",
+            "version": "5.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flipboxfactory/saml-core.git",
+                "reference": "ed3c8f4ea8c9155a6c48559b86881b28faa24c4a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flipboxfactory/saml-core/zipball/ed3c8f4ea8c9155a6c48559b86881b28faa24c4a",
+                "reference": "ed3c8f4ea8c9155a6c48559b86881b28faa24c4a",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0",
+                "flipboxfactory/keychain": "^5.0.0",
+                "simplesamlphp/saml2": "^4.6.14"
+            },
+            "require-dev": {
+                "codeception/codeception": "^3.0",
+                "squizlabs/php_codesniffer": "^3.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "flipbox\\saml\\core\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "SAML SSO Core",
+            "keywords": [
+                "SSO",
+                "cms",
+                "craftcms",
+                "federated authentication",
+                "saml",
+                "service provider",
+                "yii2"
+            ],
+            "support": {
+                "docs": "https://github.com/flipboxfactory/saml-core",
+                "email": "support@flipboxfactory.com",
+                "issues": "https://github.com/flipboxfactory/saml-core/issues?state=open",
+                "rss": "https://github.com/flipboxfactory/saml-core/commits/master.atom",
+                "source": "https://github.com/flipboxfactory/saml-core"
+            },
+            "time": "2025-04-25T23:38:18+00:00"
+        },
+        {
+            "name": "flipboxfactory/saml-sp",
+            "version": "5.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flipboxfactory/saml-sp.git",
+                "reference": "b6eedfc05508021dbebd826281498b9c5c5deaaf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flipboxfactory/saml-sp/zipball/b6eedfc05508021dbebd826281498b9c5c5deaaf",
+                "reference": "b6eedfc05508021dbebd826281498b9c5c5deaaf",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.6.0",
+                "flipboxfactory/saml-core": "^5.0.2"
+            },
+            "require-dev": {
+                "codeception/codeception": "^5.0",
+                "codeception/module-asserts": "^3.0",
+                "codeception/module-db": "^3.1",
+                "codeception/module-yii2": "^1.1",
+                "craftcms/ecs": "dev-main",
+                "craftcms/phpstan": "dev-main",
+                "friendsofphp/php-cs-fixer": "^v3.20.0",
+                "phpunit/php-code-coverage": "^11.0.3",
+                "vlucas/phpdotenv": "^5.5"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "SAML Service Provider",
+                "class": "flipbox\\saml\\sp\\Saml",
+                "handle": "saml-sp",
+                "version": "5.1.3",
+                "developer": "Flipbox Digital",
+                "downloadUrl": "https://github.com/flipboxfactory/saml-sp/archive/master.zip",
+                "changelogUrl": "https://raw.githubusercontent.com/flipboxfactory/saml-sp/master/CHANGELOG.md",
+                "developerUrl": "https://www.flipboxdigital.com",
+                "schemaVersion": "2.1.0"
+            },
+            "autoload": {
+                "psr-4": {
+                    "flipbox\\saml\\sp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "SAML Service Provider",
+            "keywords": [
+                "SSO",
+                "cms",
+                "craftcms",
+                "federated authentication",
+                "saml",
+                "service provider",
+                "sp",
+                "yii2"
+            ],
+            "support": {
+                "docs": "https://github.com/flipboxfactory/saml-sp",
+                "email": "support@flipboxfactory.com",
+                "issues": "https://github.com/flipboxfactory/saml-sp/issues?state=open",
+                "rss": "https://github.com/flipboxfactory/saml-sp/commits/master.atom",
+                "source": "https://github.com/flipboxfactory/saml-sp"
+            },
+            "time": "2025-01-29T18:57:07+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -3384,6 +3560,48 @@
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
+            "name": "robrichards/xmlseclibs",
+            "version": "3.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robrichards/xmlseclibs.git",
+                "reference": "2bdfd742624d739dfadbd415f00181b4a77aaf07"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robrichards/xmlseclibs/zipball/2bdfd742624d739dfadbd415f00181b4a77aaf07",
+                "reference": "2bdfd742624d739dfadbd415f00181b4a77aaf07",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "php": ">= 5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RobRichards\\XMLSecLibs\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "A PHP library for XML Security",
+            "homepage": "https://github.com/robrichards/xmlseclibs",
+            "keywords": [
+                "security",
+                "signature",
+                "xml",
+                "xmldsig"
+            ],
+            "support": {
+                "issues": "https://github.com/robrichards/xmlseclibs/issues",
+                "source": "https://github.com/robrichards/xmlseclibs/tree/3.1.3"
+            },
+            "time": "2024-11-20T21:13:56+00:00"
+        },
+        {
             "name": "samdark/yii2-psr-log-target",
             "version": "1.1.4",
             "source": {
@@ -3499,6 +3717,67 @@
                 "source": "https://github.com/Seldaek/cli-prompt/tree/1.0.4"
             },
             "time": "2020-12-15T21:32:01+00:00"
+        },
+        {
+            "name": "simplesamlphp/saml2",
+            "version": "v4.18.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/simplesamlphp/saml2.git",
+                "reference": "78b1c6735db8e2f78dcea9bcac0317ad2b200d72"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/simplesamlphp/saml2/zipball/78b1c6735db8e2f78dcea9bcac0317ad2b200d72",
+                "reference": "78b1c6735db8e2f78dcea9bcac0317ad2b200d72",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-openssl": "*",
+                "ext-zlib": "*",
+                "php": ">=7.1 || ^8.0",
+                "psr/log": "~1.1 || ^2.0 || ^3.0",
+                "robrichards/xmlseclibs": "^3.1.1",
+                "webmozart/assert": "^1.9"
+            },
+            "conflict": {
+                "robrichards/xmlseclibs": "3.1.2"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
+                "sebastian/phpcpd": "~4.1 || ^5.0 || ^6.0",
+                "simplesamlphp/simplesamlphp-test-framework": "~0.1.0",
+                "squizlabs/php_codesniffer": "~3.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "v4.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SAML2\\": "src/SAML2"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Åkre Solberg",
+                    "email": "andreas.solberg@uninett.no"
+                }
+            ],
+            "description": "SAML2 PHP library from SimpleSAMLphp",
+            "support": {
+                "issues": "https://github.com/simplesamlphp/saml2/issues",
+                "source": "https://github.com/simplesamlphp/saml2/tree/v4.18.1"
+            },
+            "time": "2025-03-16T11:37:44+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",

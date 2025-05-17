@@ -3,6 +3,7 @@
   "prefer-stable": true,
   "require": {
     "craftcms/cms": "^5.0.0",
+    "flipboxfactory/saml-sp": "^5.1",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
