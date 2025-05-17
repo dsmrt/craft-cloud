@@ -1,0 +1,22 @@
+dateModified: 1747492162
+email:
+  fromEmail: me@dsmrt.com
+  fromName: 'Craft Cloud Test'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    4eeee181-93ef-48e5-954c-79652f1f4b7f: 'Craft Cloud Test' # Craft Cloud Test
+    150fb3ce-a03c-4c70-b2ab-ac9670cf3ec6: 'Craft Cloud Test' # Craft Cloud Test
+system:
+  edition: solo
+  live: true
+  name: 'Craft Cloud Test'
+  schemaVersion: 5.7.0.3
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true
