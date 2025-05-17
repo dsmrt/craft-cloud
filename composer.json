@@ -29,13 +29,6 @@
     },
     "repositories": [
         {
-            "type": "path",
-            "url": "./saml-sp",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
             "type": "composer",
             "url": "https://composer.craftcms.com",
             "canonical": false
