@@ -11,15 +11,6 @@
         "craftcms/generator": "^2.0.0",
         "yiisoft/yii2-shell": "^2.0.3"
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./saml-sp",
-            "options": {
-                "symlink": true
-            }
-        }
-    ],
     "config": {
         "allow-plugins": {
             "craftcms/plugin-installer": true,
@@ -37,6 +28,13 @@
         ]
     },
     "repositories": [
+        {
+            "type": "path",
+            "url": "./saml-sp",
+            "options": {
+                "symlink": true
+            }
+        },
         {
             "type": "composer",
             "url": "https://composer.craftcms.com",

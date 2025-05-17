@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "11b3b369b0b4c5e1f5cec5d9ed6151c0",
+    "content-hash": "0bdb4f140a1211c698e3c7e3c5635b82",
     "packages": [
         {
             "name": "99designs/http-signatures",
@@ -1430,14 +1430,24 @@
             "name": "flipboxfactory/saml-sp",
             "version": "5.1.3",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/flipboxfactory/saml-sp/zipball/b6eedfc05508021dbebd826281498b9c5c5deaaf",
-                "reference": "b6eedfc05508021dbebd826281498b9c5c5deaaf",
-                "shasum": ""
+                "type": "path",
+                "url": "./saml-sp",
+                "reference": "c4e39537cbdbef80653b8347d78705ad7235a986"
             },
             "require": {
                 "craftcms/cms": "^5.6.0",
                 "flipboxfactory/saml-core": "^5.0.2"
+            },
+            "require-dev": {
+                "codeception/codeception": "^5.0",
+                "codeception/module-asserts": "^3.0",
+                "codeception/module-db": "^3.1",
+                "codeception/module-yii2": "^1.1",
+                "craftcms/ecs": "dev-main",
+                "craftcms/phpstan": "dev-main",
+                "friendsofphp/php-cs-fixer": "^v3.20.0",
+                "phpunit/php-code-coverage": "^11.0.3",
+                "vlucas/phpdotenv": "^5.5"
             },
             "type": "craft-plugin",
             "extra": {
@@ -1455,6 +1465,28 @@
                 "psr-4": {
                     "flipbox\\saml\\sp\\": "src/"
                 }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "flipbox\\saml\\sp\\tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "codecept run -vvv"
+                ],
+                "test-cvg": [
+                    "codecept run -vvv --coverage --coverage-html"
+                ],
+                "check-cs": [
+                    "ecs check --ansi"
+                ],
+                "fix-cs": [
+                    "ecs check --ansi --fix"
+                ],
+                "phpstan": [
+                    "phpstan --memory-limit=1G"
+                ]
             },
             "license": [
                 "proprietary"
@@ -1477,7 +1509,10 @@
                 "docs": "https://github.com/flipboxfactory/saml-sp",
                 "rss": "https://github.com/flipboxfactory/saml-sp/commits/master.atom"
             },
-            "time": "2025-01-29T18:57:07+00:00"
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "graham-campbell/result-type",
