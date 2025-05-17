@@ -1,0 +1,48 @@
+paths:
+  tests: tests
+  output: tests/_output
+  data: tests/_data
+  support: tests/_support
+actor_suffix: Tester
+params:
+  - tests/.env
+  - env
+bootstrap: _bootstrap.php
+settings:
+  colors: true
+  memory_limit: 2048M
+coverage:
+  enabled: true
+  include:
+    - src/*
+  exclude:
+    - src/icon.svg
+    - src/icon-mask.svg
+    - src/templates/*
+    - src/migrations/*
+extensions:
+  enabled:
+    - Codeception\Extension\RunFailed
+modules:
+  config:
+    \craft\test\Craft:
+      configFile: 'tests/_craft/config/test.php'
+      edition: 2
+      entryUrl: http://saml-sp.test/index.php
+      dbSetup:
+        clean: true
+        setupCraft: true
+      plugins:
+        - class: \flipbox\saml\sp\Saml
+          handle: saml-sp
+
+  enabled:
+    - Db:
+        dsn: '%DB_DSN%'
+        user: '%DB_USER%'
+        password: '%DB_PASSWORD%'
+        populate: true
+        # cleanup: true
+        # reconnect: true
+        # dump:
+        #   - tests/_data/create-dbs.sql

@@ -1,0 +1,10 @@
+tests/_craft/config/project/
+/build
+/vendor
+/storage
+composer.phar
+composer.lock
+.DS_Store
+.idea
+.env
+node_modules
