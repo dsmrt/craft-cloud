@@ -1,4 +1,4 @@
-dateModified: 1747492162
+dateModified: 1747496289
 email:
   fromEmail: me@dsmrt.com
   fromName: 'Craft Cloud Test'
@@ -7,8 +7,18 @@ meta:
   __names__:
     4eeee181-93ef-48e5-954c-79652f1f4b7f: 'Craft Cloud Test' # Craft Cloud Test
     150fb3ce-a03c-4c70-b2ab-ac9670cf3ec6: 'Craft Cloud Test' # Craft Cloud Test
+plugins:
+  keychain:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  saml-sp:
+    edition: standard
+    enabled: true
+    licenseKey: BPGSDC6XX1W68KJCCFRVGUUW
+    schemaVersion: 2.1.0
 system:
-  edition: solo
+  edition: team
   live: true
   name: 'Craft Cloud Test'
   schemaVersion: 5.7.0.3
