@@ -95,6 +95,7 @@ class LoginController extends AbstractController
 
         echo '<pre>';
         var_dump(
+        $settings->getEntityId(),
         array_map(function($item){
           return $item->toArray();
             },Saml::getInstance()->getProvider()->findBySp([
