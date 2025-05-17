@@ -95,11 +95,15 @@ class LoginController extends AbstractController
 
         echo '<pre>';
         var_dump(
-        $settings->getEntityId(),
-        array_map(function($item){
-          return $item->toArray();
-            },Saml::getInstance()->getProvider()->findBySp([
-        ])->all()));
+            $settings->getEntityId(),
+            array_map(function($item){
+              return $item->toArray();
+                },Saml::getInstance()->getProvider()->findBySp([
+            ])->all()),
+            Saml::getInstance()->getProvider()->findBySp($condition)->count(),
+            Saml::getInstance()->getProvider()->findBySp($condition)->one(),
+
+        );
         exit;
 
 
