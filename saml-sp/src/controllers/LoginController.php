@@ -9,6 +9,7 @@
 namespace flipbox\saml\sp\controllers;
 
 use Craft;
+use craft\helpers\ArrayHelper;
 use flipbox\saml\core\controllers\messages\AbstractController;
 use flipbox\saml\core\exceptions\InvalidMetadata;
 use flipbox\saml\core\helpers\MessageHelper;
@@ -94,12 +95,12 @@ class LoginController extends AbstractController
 
         echo '<pre>';
         var_dump(
-           $settings->getEntityId(),
-            Saml::getInstance()->getProvider()->findBySp([
-                'entityId' => $settings->getEntityId()
-            ])->ids()
-        );
+        array_map(function($item){
+          return $item->toArray();
+            },Saml::getInstance()->getProvider()->findBySp([
+        ])->all()));
         exit;
+
 
         if ($uid) {
             $condition['uid'] = $uid;
