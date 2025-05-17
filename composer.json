@@ -2,7 +2,7 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "craftcms/cloud": "^2.14",
+    "craftcms/cloud": "*",
     "craftcms/cms": "^5.0.0",
     "flipboxfactory/saml-sp": "^5.1",
     "vlucas/phpdotenv": "^5.4.0"
@@ -26,5 +26,12 @@
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example.dev', '.env');\""
     ]
-  }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.craftcms.com",
+      "canonical": false
+    }
+  ]
 }
